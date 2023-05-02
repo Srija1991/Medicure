@@ -116,4 +116,4 @@
    - name: sleeping
      command: sleep 20
    - name: Deploy medicure app using Kubernetes
-     command: kubectl apply -f d/var/lib/jenkins/workspace/Medicure/prod-server/deployment.yml
+     command: kubectl apply -f d/var/lib/jenkins/workspace/Prod_Server_medicure/prod-server/deployment.yml
