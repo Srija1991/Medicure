@@ -45,7 +45,6 @@
        owner: root
        group: root
        mode: "0755"
-   - name: Build binary
    - name: Install Go
      become: true
      apt:
