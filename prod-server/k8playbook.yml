@@ -45,10 +45,6 @@
        owner: root
        group: root
        mode: "0755"
-   - name: Install dependencies
-     shell: go get
-     args:
-       chdir: /home/ubuntu/cri-dockerd/
    - name: Build binary
      shell: go build -o bin/cri-dockerd
      args:
