@@ -15,24 +15,7 @@ pipeline {
                 sh 'terraform apply --auto-approve'
                 }
 	      }
-	      }
-	       stage('k8s deployment'){
-      steps{
-          sshagent(['k8s']) {
-          sh 'scp -o StrictHostKeyChecking=no deployment.yml ubuntu@172.31.44.181:/home/ubuntu'
-          script{
-              try{
-                  sh "ssh ubuntu@172.31.44.181 sudo kubectl apply -f ."
-              }
-	      catch(error){
-                  sh "ssh ubuntu@172.31.44.181 sudo kubectl create -f ."
-              }
-            }
-          }
-
-       }
-
-      }
+	      } 
 	      }
 	      }
 
